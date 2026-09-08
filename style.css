@@ -1,0 +1,1135 @@
+/* RESET I OSNOVNI STILOVI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #2C221E;
+    --accent-wood: #D4A373;
+    --accent-warm: #BC6C25;
+    --bg-light: #F8F5F0;
+    --text-color: #333333;
+    --white: #FFFFFF;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVIGACIJA */
+.navbar {
+    background-color: var(--primary-dark);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.logo h2 {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.logo span {
+    font-size: 0.65rem;
+    color: var(--accent-wood);
+    display: block;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-wood);
+}
+
+.cart-icon a {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* HERO SEKCIJA */
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(44, 34, 30, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.tagline {
+    color: var(--accent-wood);
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-warm);
+    color: var(--white);
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #a05a1f;
+}
+
+.btn-secondary {
+    border: 2px solid var(--accent-wood);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-wood);
+    color: var(--primary-dark);
+}
+
+/* USLUGE */
+.services {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-warm);
+    margin: 10px auto 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--accent-warm);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+/* SEKCIJA PROIZVODA */
+.products {
+    padding: 60px 20px 80px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.product-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+/* Badaž / Tagovi */
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.badge.new {
+    background-color: var(--accent-warm);
+}
+
+/* Dugme za brzi pregled pri prelasku mišem */
+.product-actions {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    transition: bottom 0.3s ease;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+}
+
+.product-card:hover .product-actions {
+    bottom: 0;
+}
+
+.btn-quick-view {
+    background-color: var(--white);
+    color: var(--primary-dark);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.btn-quick-view:hover {
+    background-color: var(--accent-wood);
+    color: var(--white);
+}
+
+/* Informacije o proizvodu */
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info .category {
+    font-size: 0.75rem;
+    color: var(--accent-warm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.product-info .description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.btn-add-cart {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--accent-warm);
+}
+
+/* STRANICA DETALJA PROIZVODA */
+.product-details-section {
+    padding: 60px 20px;
+}
+
+.product-details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Galerija slika */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-list {
+    display: flex;
+    gap: 10px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.thumb:hover, .thumb.active {
+    opacity: 1;
+    border-color: var(--accent-warm);
+}
+
+/* Prilagođavanje i forma */
+.product-customizer h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin: 5px 0 10px;
+}
+
+.product-customizer .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-warm);
+    margin-bottom: 15px;
+}
+
+.product-customizer .short-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.customization-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.form-group small {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+/* Količina i dugme */
+.quantity-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.quantity-control button {
+    background: #f0f0f0;
+    border: none;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quantity-control input {
+    width: 45px;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product-details-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* STRANICA KATALOGA I CUSTOM MADE */
+.page-header {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+}
+
+.page-header p {
+    color: var(--accent-wood);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   CUSTOM MADE SEKCIJA
+   ========================================== */
+.custom-made-section {
+    padding: 80px 0;
+    background: #fbf9f6;
+}
+
+.custom-made-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 50px;
+    border: 1px solid #f0eae1;
+}
+
+/* Leva strana */
+.badge-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f3ece2;
+    color: var(--accent-warm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.custom-text h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.custom-text > p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.custom-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.f-icon {
+    width: 44px;
+    height: 44px;
+    background: #fbf9f6;
+    border: 1px solid #eee5d8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-warm);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-item h4 {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-bottom: 2px;
+}
+
+.feature-item p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Desna strana - Forma */
+.custom-form-wrapper {
+    background: #faf8f5;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.custom-form h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.custom-form .form-group {
+    margin-bottom: 16px;
+}
+
+.custom-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="tel"],
+.custom-form textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: var(--white);
+    transition: border-color 0.2s;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-warm);
+}
+
+/* Polje za upload slika */
+.file-upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--white);
+    border: 2px dashed #d1c7b7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.file-upload-box:hover {
+    border-color: var(--accent-warm);
+    background: #fffdfa;
+}
+
+.file-upload-box i {
+    font-size: 2rem;
+    color: var(--accent-warm);
+    margin-bottom: 6px;
+}
+
+.file-upload-box span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.file-upload-box small {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 4px;
+}
+
+.file-upload-box input[type="file"] {
+    display: none;
+}
+
+.btn-custom-submit {
+    margin-top: 10px;
+    padding: 12px;
+}
+
+/* Mobilna prilagođenost */
+@media (max-width: 992px) {
+    .custom-made-card {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+}
+/* KONTAKT STRANICA */
+.contact-section {
+    padding: 60px 20px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.contact-cards {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.c-card i {
+    font-size: 1.5rem;
+    color: var(--accent-warm);
+    width: 40px;
+    height: 40px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.c-card h4 {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.c-card a {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.c-card a:hover {
+    color: var(--accent-warm);
+}
+
+/* WhatsApp i Viber dugmad */
+.quick-contact-btns {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb857;
+}
+
+.btn-viber {
+    background-color: #7360f2;
+    color: #fff;
+}
+
+.btn-viber:hover {
+    background-color: #5e4cd4;
+}
+
+/* Društvene mreže */
+.social-links h4 {
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-warm);
+}
+
+/* Forma */
+.contact-form-container h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .quick-contact-btns {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================
+   KORPA PAGE - PROFESIONALNI DIZAJN
+   ========================================== */
+.cart-section {
+    padding: 50px 20px;
+}
+
+.cart-title-wrapper {
+    margin-bottom: 30px;
+}
+
+.cart-title-wrapper h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-title-wrapper p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+.cart-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Leva Kartica - Tabela */
+.cart-items-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.cart-table td {
+    padding: 18px 0;
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 0.95rem;
+}
+
+.empty-cart-box {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-cart-box i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.empty-cart-box h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.empty-cart-box p {
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Desna Kartica - Rezime */
+.cart-summary-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.summary-header {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 18px 25px;
+}
+
+.summary-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.summary-body {
+    padding: 25px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.badge-shipping {
+    font-size: 0.75rem;
+    background: #fdf3e7;
+    color: var(--accent-warm);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.summary-divider {
+    height: 1px;
+    background: #eee;
+    margin: 18px 0;
+}
+
+.total-row {
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+}
+
+.total-row strong {
+    font-size: 1.4rem;
+    color: var(--accent-warm);
+}
+
+.form-section-title {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    margin: 22px 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 14px;
+}
+
+.checkout-form label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.checkout-form input, 
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+.checkout-form input:focus, 
+.checkout-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-warm);
+}
+
+.btn-checkout {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 0.95rem;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .cart-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* TOAST OBAVEŠTENJE ZA KORPU */
+.toast-notification {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--white);
+    border-left: 4px solid var(--accent-warm);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-icon {
+    color: #2e7d32;
+    font-size: 1.3rem;
+}
+
+.toast-img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.toast-content strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+}
+
+.toast-content p {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toast-btn {
+    background: #fdf3e7;
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-left: 8px;
+    transition: background 0.2s;
+}
+
+.toast-btn:hover {
+    background: var(--accent-warm);
+    color: var(--white);
+}
+
+@media (max-width: 576px) {
+    .toast-notification {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
