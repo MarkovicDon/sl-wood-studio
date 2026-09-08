@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Proizvoda | SL Wood Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <h2>SL WOOD STUDIO</h2>
+                <span>ENGRAVING & CARVING</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="shop.html" class="active">Prodavnica</a></li>
+                    <li><a href="product-details.html">Usluge</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Naslov Kataloga -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Naša Kolekcija</h1>
+            <p>Izaberite gotov model ili ga prilagodite po vašoj meri</p>
+        </div>
+    </section>
+
+    <!-- Katalog Proizvoda -->
+    <section class="products container" style="padding-top: 40px;">
+        <div class="products-grid">
+            
+            <!-- Proizvod 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="product-details.html">
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=600" alt="Privezak">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <span class="category">Privesci</span>
+                    <h3><a href="product-details.html" style="text-decoration:none; color:inherit;">Personalizovani Privezak</a></h3>
+                    <p class="description">Laserski graviran privezak od drveta sa vašim tekstom.</p>
+                    <div class="product-bottom">
+                        <span class="price">600 RSD</span>
+                        <a href="product-details.html" class="btn-add-cart">Prilagodi i Naruči</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proizvod 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="product-details.html">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600" alt="Kutija za piće">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <span class="category">Kutije</span>
+                    <h3><a href="product-details.html" style="text-decoration:none; color:inherit;">Gravirana Kutija za Piće</a></h3>
+                    <p class="description">Idealna za poklone, rođendane i posebne prilike.</p>
+                    <div class="product-bottom">
+                        <span class="price">2.500 RSD</span>
+                        <a href="product-details.html" class="btn-add-cart">Prilagodi i Naruči</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proizvod 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="product-details.html">
+                        <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?q=80&w=600" alt="Drveni znak">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <span class="category">Dekoracija</span>
+                    <h3><a href="product-details.html" style="text-decoration:none; color:inherit;">3D Zidna Plaketa / Znak</a></h3>
+                    <p class="description">Mehanički urezan logo ili natpis za vaš prostor.</p>
+                    <div class="product-bottom">
+                        <span class="price">1.800 RSD</span>
+                        <a href="product-details.html" class="btn-add-cart">Prilagodi i Naruči</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- POSEBNA SEKCIJA: Custom Made / Unikatna Izrada -->
+<section id="custom-order" class="custom-made-section">
+    <div class="container">
+        <div class="custom-made-card">
+            
+            <!-- Leva strana: Prezentacija i prednosti -->
+            <div class="custom-text">
+                <span class="badge-accent"><i class="fa-solid fa-wand-magic-sparkles"></i> Unikatna Izrada</span>
+                <h2>Imate svoju ideju ili sliku?</h2>
+                <p>Želite nešto što nemamo u standardnoj ponudi? Pošaljite nam vašu sliku, skicu ili dimenzije, a mi ćemo napraviti drveni predmet tačno po vašoj zamisli.</p>
+
+                <div class="custom-features-list">
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <div>
+                            <h4>Besplatna priprema</h4>
+                            <p>Pravimo vam vizuelni prikaz pre samog sečenja i graviranja.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-tree"></i></div>
+                        <div>
+                            <h4>Izbor drveta i dimenzija</h4>
+                            <p>Prilagođavamo dimenzije i vrstu drveta vašim potrebama.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="f-icon"><i class="fa-solid fa-camera"></i></div>
+                        <div>
+                            <h4>Graviranje slika i logoa</h4>
+                            <p>Prevaramo vaše omiljene fotografije i logotipe u drveni reljef.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desna strana: Modernizovana forma -->
+            <div class="custom-form-wrapper">
+                <form class="custom-form">
+                    <h3>Zahtev za Custom Izradu</h3>
+                    
+                    <div class="form-group">
+                        <label for="cust-idea-name">Vaše Ime i Prezime *</label>
+                        <input type="text" id="cust-idea-name" placeholder="Petar Petrović" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-idea-phone">Telefon / WhatsApp / Viber *</label>
+                        <input type="tel" id="cust-idea-phone" placeholder="06X XXX XXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cust-idea-desc">Opis vaše ideje (dimenzije, namena...)</label>
+                        <textarea id="cust-idea-desc" rows="3" placeholder="Želim drvenu ploču 30x20cm sa izgraviranom slikom naše kuće..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priložite sliku ili skicu *</label>
+                        <label for="cust-file" class="file-upload-box">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <span>Kliknite ili prevucite sliku ovde</span>
+                            <small>Podržani formati: JPG, PNG, PDF</small>
+                            <input type="file" id="cust-file" accept="image/*,.pdf" required>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-custom-submit">
+                        <i class="fa-solid fa-paper-plane"></i> Pošalji Upit za Izradu
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script src="js/main.js"></script>
+</body>
+</html>

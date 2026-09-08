@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | SL Wood Studio</title>
+
+    <!-- Google Fontovi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Ikonice -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Glavni CSS Fajl -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigacija (Identična kao na index.html) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <h2>SL WOOD STUDIO</h2>
+                <span>ENGRAVING & CARVING</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="shop.html">Prodavnica</a></li>
+                    <li><a href="product-details.html">Usluge</a></li>
+                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-section container">
+        <div class="contact-wrapper">
+            
+            <!-- Informacije i Brzi Linkovi -->
+            <div class="contact-info">
+                <h2>Stupite u kontakt sa nama</h2>
+                <p>Imate pitanje, želite konsultaciju ili custom narudžbinu? Slobodno nas kontaktirajte putem telefona, mrežama ili forme.</p>
+
+                <div class="contact-cards">
+                    <div class="c-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Telefon / Viber / WhatsApp</h4>
+                            <p><a href="tel:063653443">063 653 443</a></p>
+                        </div>
+                    </div>
+
+                    <div class="c-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email adresa</h4>
+                            <p><a href="mailto:slwoodstudio@gmail.com">slwoodstudio@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="c-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Lokacija</h4>
+                            <p>Donja Rača, Rača Kragujevačka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direktna dugmad za poručivanje -->
+                <div class="quick-contact-btns">
+                    <a href="https://wa.me/38163653443" target="_blank" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Piši na WhatsApp
+                    </a>
+                    <a href="viber://chat?number=%2B38163653443" class="btn btn-viber">
+                        <i class="fa-brands fa-viber"></i> Piši na Viber
+                    </a>
+                </div>
+
+                <!-- Društvene mreže -->
+                <div class="social-links">
+                    <h4>Pratite naš rad:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/slwoodstudio/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@slwoodstudio78" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kontakt Forma -->
+            <div class="contact-form-container">
+                <h3>Pošaljite nam poruku</h3>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="c-name">Vaše Ime i Prezime *</label>
+                        <input type="text" id="c-name" required placeholder="Unesite vaše ime">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-contact">Vaš Broj Telefona ili Email *</label>
+                        <input type="text" id="c-contact" required placeholder="Kako da vas kontaktiramo?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-subject">Tema / Proizvod</label>
+                        <input type="text" id="c-subject" placeholder="npr. Upit za lasersku gravuru">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="c-message">Vaša Poruka *</label>
+                        <textarea id="c-message" rows="5" required placeholder="Napišite vaše pitanje ili opišite šta vam je potrebno..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fa-solid fa-paper-plane"></i> Pošalji Poruku
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+<script src="js/main.js"></script>
+</body>
+</html>

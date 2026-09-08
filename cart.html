@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korpa | SL Wood Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <h2>SL WOOD STUDIO</h2>
+                <span>ENGRAVING & CARVING</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="shop.html">Prodavnica</a></li>
+                    <li><a href="product-details.html">Usluge</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="cart-section container">
+        <div class="cart-title-wrapper">
+            <h2><i class="fa-solid fa-cart-flatbed"></i> Vaša Korpa</h2>
+            <p>Pregledajte izabrane proizvode i unesite podatke za isporuku.</p>
+        </div>
+
+        <div class="cart-wrapper">
+            <!-- Tabela sa izabranim proizvodima -->
+            <div class="cart-items-card">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Proizvod</th>
+                            <th>Cena</th>
+                            <th>Količina</th>
+                            <th>Ukupno</th>
+                            <th style="text-align: right;">Ukloni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-body">
+                        <!-- JS dinamički ubacuje stavke ovde -->
+                    </tbody>
+                </table>
+                <div id="empty-cart-msg" style="display:none;" class="empty-cart-box">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <h3>Vaša korpa je trenutno prazna</h3>
+                    <p>Izaberite neki od naših unikatnih drvenih proizvoda iz prodavnice.</p>
+                    <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-store"></i> Pogledaj Prodavnicu</a>
+                </div>
+            </div>
+
+            <!-- Profesionalni Rezime Porudžbine -->
+            <div class="cart-summary-card">
+                <div class="summary-header">
+                    <h3>Rezime Porudžbine</h3>
+                </div>
+
+                <div class="summary-body">
+                    <div class="summary-row">
+                        <span>Međuzbir:</span>
+                        <span id="cart-subtotal">0 RSD</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Dostava (Kurirska služba):</span>
+                        <span class="badge-shipping">Plaćanje po preuzimanju</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total-row">
+                        <span>Ukupno:</span>
+                        <strong id="cart-total-price">0 RSD</strong>
+                    </div>
+
+                    <form id="checkout-form" class="checkout-form">
+                        <h4 class="form-section-title"><i class="fa-solid fa-truck-ramp-box"></i> Podaci za dostavu</h4>
+                        
+                        <div class="form-group">
+                            <label for="cust-name">Ime i Prezime *</label>
+                            <input type="text" id="cust-name" required placeholder="Marko Marković">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cust-phone">Broj Telefona (za kurira) *</label>
+                            <input type="tel" id="cust-phone" required placeholder="0641234567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cust-address">Adresa, Broj i Mesto *</label>
+                            <input type="text" id="cust-address" required placeholder="Njegoševa 12, Beograd">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cust-note">Tekst za gravuru / Napomena</label>
+                            <textarea id="cust-note" rows="3" placeholder="Unesite inicijale, datum ili posebne zahteve..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full btn-checkout">
+                            <i class="fa-solid fa-check"></i> Potvrdi i Naruči
+                        </button>
+                    </form>
+
+                    <a href="shop.html" class="btn-secondary-link">
+                        <i class="fa-solid fa-arrow-left"></i> Nastavi sa kupovinom
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

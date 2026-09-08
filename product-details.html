@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji Proizvoda | SL Wood Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <h2>SL WOOD STUDIO</h2>
+                <span>ENGRAVING & CARVING</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="shop.html" class="active">Prodavnica</a></li>
+                    <li><a href="index.html#usluge">Usluge</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detalji Proizvoda -->
+    <section class="product-details-section container">
+        <div class="product-details-wrapper product-detail-container">
+            
+            <!-- Slike proizvoda -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="detail-img" src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=800" alt="Drveni proizvod">
+                </div>
+                <div class="thumbnail-list">
+                    <img class="thumb active" src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=800" onclick="changeImage(this.src, this)" alt="Slika 1">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=800" onclick="changeImage(this.src, this)" alt="Slika 2">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?q=80&w=800" onclick="changeImage(this.src, this)" alt="Slika 3">
+                </div>
+            </div>
+
+            <!-- Informacije i Opcije za naručivanje -->
+            <div class="product-customizer">
+                <span id="detail-category" class="category">Privesci / Personalizovano</span>
+                <h1 id="detail-title">Personalizovani Drveni Privezak</h1>
+                <p id="detail-price" class="price">600 RSD</p>
+                <p class="short-desc">
+                    Ručno finiširan privezak od punog drveta sa laserskom gravurom po vašem izboru. Radimo posvete, imena, datume, inicijale ili vektorske logotipe.
+                </p>
+
+                <form class="customization-form" id="order-form" onsubmit="event.preventDefault();">
+                    
+                    <!-- Formular za Gravuru -->
+                    <div class="form-group">
+                        <label for="engraving-text">
+                            <i class="fa-solid fa-pen"></i> Tekst za graviranje:
+                        </label>
+                        <input type="text" id="engraving-text" placeholder="npr. Miloš & Ana 12.05.2024." maxlength="60">
+                        <small>Maksimalno 60 karaktera</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="engraving-font">
+                            <i class="fa-solid fa-font"></i> Stil fonta:
+                        </label>
+                        <select id="engraving-font">
+                            <option value="classic">Klasični (Serif)</option>
+                            <option value="modern">Moderan (Sans-Serif)</option>
+                            <option value="cursive">Pisana slova (Kaligrafija)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image-upload">
+                            <i class="fa-solid fa-upload"></i> Priložite vašu sliku/logo (opciono):
+                        </label>
+                        <input type="file" id="image-upload" accept="image/*,.pdf,.svg">
+                        <small>Podržani formati: JPG, PNG, SVG, PDF</small>
+                    </div>
+
+                    <div class="form-group quantity-group">
+                        <label for="detail-qty">Količina:</label>
+                        <div class="quantity-control">
+                            <button type="button" onclick="decreaseQty()">-</button>
+                            <input type="number" id="detail-qty" value="1" min="1" readonly>
+                            <button type="button" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+
+                    <button type="button" id="btn-add-to-cart-detail" class="btn btn-primary btn-full">
+                        <i class="fa-solid fa-cart-shopping"></i> Dodaj u korpu
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JS za galeriju i količinu -->
+    <script>
+        function changeImage(src, element) {
+            document.getElementById('detail-img').src = src;
+            document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
+            if(element) element.classList.add('active');
+        }
+
+        function increaseQty() {
+            let qty = document.getElementById('detail-qty');
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        function decreaseQty() {
+            let qty = document.getElementById('detail-qty');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
