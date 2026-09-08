@@ -1,27 +1,30 @@
-// 1. Podaci o proizvodima
-const products = [
-    {
-        id: 1,
-        title: "Personalizovani Drveni Privezak",
-        category: "Privesci",
-        price: 600,
-        image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=600"
-    },
-    {
-        id: 2,
-        title: "Gravirana Drvena Kutija za Piće",
-        category: "Kutije",
-        price: 2500,
-        image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600"
-    },
-    {
-        id: 3,
-        title: "3D Zidni Znak / Plaketa",
-        category: "Plakete",
-        price: 1800,
-        image: "https://images.unsplash.com/photo-1582582621959-48d27397dc69?q=80&w=600"
+// Dynamic loading of products from CMS JSON file
+let products = [];
+
+// Inicijalizacija Korpe iz LocalStorage-a
+let cart = JSON.parse(localStorage.getItem('sl_cart')) || [];
+
+// Pokretanje funkcija nakon učitavanja stranice
+document.addEventListener('DOMContentLoaded', async () => {
+    await fetchCMSProducts();
+    updateCartBadge();
+    loadFeaturedProducts();
+    renderCartTable();
+    loadProductDetails();
+});
+
+// Funkcija za preuzimanje proizvoda iz CMS JSON fajla
+async function fetchCMSProducts() {
+    try {
+        const response = await fetch('./content/products.json');
+        if (response.ok) {
+            const data = await response.json();
+            products = data.items || [];
+        }
+    } catch (err) {
+        console.error("Greška pri učitavanju proizvoda iz CMS-a:", err);
     }
-];
+}
 
 // 2. Inicijalizacija Korpe iz LocalStorage-a
 let cart = JSON.parse(localStorage.getItem('sl_cart')) || [];
