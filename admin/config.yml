@@ -1,20 +1,27 @@
 backend:
   name: git-gateway
-  branch: main # Ili 'master', zavisno od tvoje GitHub grane
+  branch: main
 
-media_folder: "assets/images/products" # Gde se čuvaju slike u projektu
-public_folder: "assets/images/products" # Putanja do slika u HTML-u
+media_folder: "assets/images/products"
+public_folder: "assets/images/products"
 
 collections:
-  - name: "products"
+  - name: "products_collection"
     label: "Proizvodi"
-    folder: "content/products" # Gde se čuvaju podaci o proizvodima
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Naslov proizvoda", name: "title", widget: "string" }
-      - { label: "Cena (RSD)", name: "price", widget: "string" }
-      - { label: "Kategorija", name: "category", widget: "select", options: ["Privesci", "Kutije", "Plakete", "Pokloni"] }
-      - { label: "Slika proizvoda", name: "image", widget: "image" }
-      - { label: "Kratak opis", name: "description", widget: "text" }
-      - { label: "Izdvojeno na početnoj?", name: "featured", widget: "boolean", default: false }
+    files:
+      - file: "content/products.json"
+        label: "Lista Proizvoda"
+        name: "products_file"
+        fields:
+          - label: "Proizvodi"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.price}} RSD"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int" }
+              - { label: "Naslov proizvoda", name: "title", widget: "string" }
+              - { label: "Cena (RSD)", name: "price", widget: "number", value_type: "int" }
+              - { label: "Kategorija", name: "category", widget: "select", options: ["Privesci", "Kutije", "Plakete", "Pokloni"] }
+              - { label: "Slika proizvoda", name: "image", widget: "image" }
+              - { label: "Kratak opis", name: "description", widget: "text", required: false }
+              - { label: "Izdvojeno na početnoj?", name: "featured", widget: "boolean", default: false }
