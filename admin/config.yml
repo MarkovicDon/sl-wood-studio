@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main # Ili 'master', zavisno od tvoje GitHub grane
 
-media_folder: "assets/images/products" # Gde se čuvaju slike u projektu
+media_folder: "public/assets/images/products" # Gde se čuvaju slike u projektu
 public_folder: "/assets/images/products" # Putanja do slika u HTML-u
 
 collections:
