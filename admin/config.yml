@@ -3,7 +3,7 @@ backend:
   branch: main # Ili 'master', zavisno od tvoje GitHub grane
 
 media_folder: "assets/images/products" # Gde se čuvaju slike u projektu
-public_folder: "/assets/images/products" # Putanja do slika u HTML-u
+public_folder: "assets/images/products" # Putanja do slika u HTML-u
 
 collections:
   - name: "products"
