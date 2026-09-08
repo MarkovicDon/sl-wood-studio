@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # Ili 'master', zavisno od tvoje GitHub grane
+
+media_folder: "assets/images/products" # Gde se čuvaju slike u projektu
+public_folder: "/assets/images/products" # Putanja do slika u HTML-u
+
+collections:
+  - name: "products"
+    label: "Proizvodi"
+    folder: "content/products" # Gde se čuvaju podaci o proizvodima
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Naslov proizvoda", name: "title", widget: "string" }
+      - { label: "Cena (RSD)", name: "price", widget: "string" }
+      - { label: "Kategorija", name: "category", widget: "select", options: ["Privesci", "Kutije", "Plakete", "Pokloni"] }
+      - { label: "Slika proizvoda", name: "image", widget: "image" }
+      - { label: "Kratak opis", name: "description", widget: "text" }
+      - { label: "Izdvojeno na početnoj?", name: "featured", widget: "boolean", default: false }
