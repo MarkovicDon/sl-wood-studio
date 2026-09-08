@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "featured": true,
+      "id": 2,
+      "title": "Ram dekorativni",
+      "price": 7000,
+      "category": "Pokloni",
+      "image": "assets/images/products/ram-za-prozor.jpeg",
+      "description": "dsadasd"
+    }
+  ]
+}
